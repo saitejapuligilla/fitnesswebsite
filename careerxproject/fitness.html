@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Fierce Fitness-Fitness</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b2a8fe8dc1.js"></script>
+</head>
+<body>
+    <nav >
+        
+            <div class="logo">
+                <i class="fa-solid fa-dumbbell"></i>
+                <h1>Fierce Fitness</h1>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Fitness</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Location</a></li>
+                    <li><a href="">Store</a></li>
+                    <li><a href="" >contact Us</a></li>
+                    <li><a href="#" onclick="openlogin()"><i class="fa-solid fa-user"></i></a></li>
+                </ul>
+            </div>
+     
+    </nav>
+    <section id="login">
+        <div class="login-inside">
+            <a href="#" onclick="closelogin()" class="logo-close">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+            <div class="logo">
+                <i class="fa-solid fa-dumbbell"></i>
+                <h1>Fierce Fitness</h1>
+            </div>
+            <div class="form">
+                <input type="tel" name="phonenumber" placeholder="Enter Your Phone Number">
+                <button id="contine" type="submit" onclick="">continue</button>
+            </div>
+            <div class="login-usingapps">
+                <span>or connect with us</span>
+                <div class="login-logo">
+                    <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AaSxoQzlQPX7i9ATws17l3fVnaZw5EJN_5cLVAhaFuUnHfBZcWmFRW13IKYBObaqhqaRLKE6DCzHAg&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S789054080%3A1715268262860174&theme=mn&ddm=0" target="_blank"><i class="fa-brands fa-google"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=151&ct=1715268312&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fcobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26nlp%3d1%26RpsCsrfState%3d590a73e7-31d3-59b1-fc62-a3b5bd9004eb&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div>
+                <p>* By Continuing you agree to the Terms of Services and Privacy policy.</p>
+            </div>
+        </div>
+        <script>
+            function closelogin(){
+            document.getElementById("login").style.display="none";
+        }
+        function openlogin(){
+            document.getElementById("login").style.display="flex";
+        }
+        </script>
+    </section>
+    <section id="smallnav">
+        <nav>
+            <div class="navigation">
+                <ul>
+                    <li><a href="">cultpass ELITE</a></li>
+                    <li><a href="">cultpass PRO</a></li>
+                    <li><a href="">cultpass HOME</a></li>
+                    <li><a href="">cultpass Transform</a></li>
+                    <li><a href="#comparison" class="btn">compare plans</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <h1 style="text-align: center;color: gold;font-size: 100px; margin: 50px;">Fitness</h1>
+    <section id="comparison">
+        <div class="comparison">
+            <h1>Choose your cultpass</h1>
+            <h3>3 flexible plans to suit your fitness needs</h3>
+            <div class="table">
+                <table>
+                    <thead class="theader">
+                        <td></td>
+                        <td>ELITE</td>
+                        <td>PRO</td>
+                        <td>HOME</td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>ELITE Gyms & At Centre Group Classes
+                            </th>
+                            <td>
+                                <i class="fa-regular fa-circle-check"></i>
+                                Unlimited
+                            </td>
+                            <td>
+                                02 Sessions/ month
+                            </td>
+                            <td>
+                                <i class="fa-solid fa-circle-xmark"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>PRO Gyms
+                            </th>
+                            <td>
+                                <i class="fa-regular fa-circle-check"></i>
+                                Unlimited
+                            </td>
+                            <td>
+                                <i class="fa-regular fa-circle-check"></i>
+                                Unlimited
+                            </td>
+                            <td><i class="fa-solid fa-circle-xmark"></i></td>
+
+                        </tr>
+                        <tr>
+                            <th>Smart workout plan
+                            </th>
+                            <td>
+                                <i class="fa-regular fa-circle-check"></i>
+                                Unlimited
+                            </td>
+                            <td>
+                                <i class="fa-regular fa-circle-check"></i>
+                                Unlimited
+                            </td>
+                            <td><i class="fa-solid fa-circle-xmark"></i></td>
+                        </tr>
+                        <tr>
+                            <th>At home workouts</th>
+                            <td>
+                                <i class="fa-regular fa-circle-check"></i>
+                                Unlimited
+                            </td>
+                            <td>
+                                <i class="fa-regular fa-circle-check"></i>
+                                Unlimited
+                            </td>
+                            <td>
+                                <i class="fa-regular fa-circle-check"></i>
+                                Unlimited
+                            </td>
+                        </tr>
+                        <tr class="special">
+                            <td></td>
+                            <td>
+                                Starting at ₹958.0 / month
+                                
+                            </td>
+                            <td>
+                                Starting at ₹715.0 / month
+                               
+                            </td>
+                            <td>
+                                Starting at ₹102.0 / month
+                               
+                            </td>
+                        </tr>
+                        <tr class="special">
+                            <td></td>
+                            <td>
+                                
+                                <a href="" class="btn">BUY NOW</a>
+                            </td>
+                            <td>
+                                <a href="" class="btn">BUY NOW</a>
+                            </td>
+                            <td>
+                                <a href="" class="btn">BUY NOW</a>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section id="cultpass-fit">
+        <div class="cultpass-elite-base">
+            <h2>cult-pass <span>ELITE</span></h2>
+            <h1>Unlimited access to everything in your city</h1>
+            <h4 >Unlimited access to</h4>
+            <ul>
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    At-center group classes
+                </li>
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    All ELITE & PRO gyms
+                </li>
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    At-home live workouts
+                </li>
+                
+            </ul>
+            <span>Starting at ₹958 / month + taxes</span>
+            <div class="btn">
+                <a href="" class="blue">TRY FOR FREE</a>
+                <a href="" class="yellow">BUY NOW</a>
+            </div>
+            <h3>sale on now</h3>
+        </div>
+        <div class="elite-pic">
+            <img src="photos/elite.jpg" alt="">
+        </div>
+    </section>
+    <section id="cultpass-fit"  style="margin-top: 80px; margin-bottom: 80px;">
+        <div class="elite-pic">
+            <img src="photos/pro.jpg" alt="">
+        </div>
+        <div class="cultpass-elite-base">
+            <h2>cult-pass <span>PRO</span></h2>
+            <h1>Unlimited access to PRO gyms in your city</h1>
+            <h4 >Unlimited access to</h4>
+            <ul>
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    All PRO gyms
+                </li>
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    At-home live workouts
+                </li>
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    2 Sessions/month at ELITE gyms & group classes
+                </li>
+                
+            </ul>
+            <span>Starting at ₹715 / month + taxes</span>
+            <div class="btn">
+                <a href="" class="blue">TRY FOR FREE</a>
+                <a href="" class="yellow">BUY NOW</a>
+            </div>
+            <h3>sale on now</h3>
+        </div>
+        
+    </section>
+    <section id="cultpass-fit">
+        <div class="cultpass-elite-base">
+            <h2>cult-pass <span>HOME</span></h2>
+            <h1>Bring the gym environment to your home</h1>
+            <h4 >Unlimited access to</h4>
+            <ul>
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    At-home workouts
+                </li>
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    Celebrity workouts
+                </li>
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    Goal-based workouts & meditation sessions
+                </li>
+                
+            </ul>
+            <span>Starting at ₹226 / month + taxes</span>
+            <div class="btn">
+                <a href="" class="blue">TRY FOR FREE</a>
+                <a href="" class="yellow">BUY NOW</a>
+            </div>
+            <h3>sale on now</h3>
+        </div>
+        <div class="elite-pic">
+            <img src="photos/elite.jpg" alt="">
+        </div>
+    </section>
+    <section id="download-link">
+        <div class="download-link1">    
+            <h2>Loved by the fitness community.<br>Join the cult!</h2>
+            <span>The best unified fitness platform. Energy meter and live workouts are a game changer</span>
+            
+            <div class="download-play">
+                <a href="https://play.google.com/store/apps/details?id=fit.cure.android"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"  class="img1" width="145" /></a>
+                <a href="https://apps.apple.com/us/app/cult-fit-health-fitness-gyms/id1217794588" ><img class="img2" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"alt="bn45"/></a>
+            </div>
+            
+        </div>
+        <div class="download-link2">
+            <div>
+                <i class="fa1 fa-solid fa-star"></i>
+                <i class="fa2 fa-solid fa-star" ></i>
+                <i class="fa3 fa-solid fa-star"></i>
+                <i class="fa2 fa-solid fa-star"></i>
+                <i class="fa1 fa-solid fa-star"></i>
+                
+            </div>
+            <h1>4.8</h1>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-logo">
+                <i class="fa-solid fa-dumbbell"></i>
+                <h1>Fierce Fitness</h1>
+            </div>
+        </div>
+        <div class="footer-main">
+            <p class="links"> for business</p>
+            <p class="links"> franchise</p>
+            <p class="links">corporate partnerships</p>
+            <p class="links">pass network</p>
+            <a href="https://static.cult.fit/tnc_business.html" target="_blank" class="links">t&c for business</a>
+        </div>
+        <div class="footer-main">
+            <p class="links">partner.fit</p>
+            <p class="links">blogs</p>
+            <p class="links">security</p>
+            <p class="links">careers</p>
+           
+        </div>
+        <div class="footer-main">
+            <a href="#" class="links">contact us</a>
+            <a href="https://static.cult.fit/privacy__cult.html" target="_blank" class="links">privacy policy</a>
+            <a class="links" href="#bmi">cult bmi calculator</a>
+            <a href="https://static.cult.fit/terms__cult.html" target="_blank" class="links">terms & conditions</a>
+        </div>
+        
+        <div class="footer-main">
+                <div class="footer-google">
+                    <a href="https://play.google.com/store/apps/details?id=fit.cure.android"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="140" height="auto" /></a>
+                    <a href="https://apps.apple.com/us/app/cult-fit-health-fitness-gyms/id1217794588" ><img class="bn46" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"alt="bn45"/></a>
+                </div>
+                <h3 style="color: white;">FOLLOW US ON</h3>
+                <div class="footer-insta">
+                    <a href="https://www.instagram.com/cultfitOfficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCSE72IaHOL-1Tv-m3JHE4Cg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/cultfitofficial" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=https://twitter.com/cultfitOfficial"" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/cult.fit/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <div class="footer-foot">CopyRight <i class="fa-solid fa-copyright"></i>2020 Fierce Fitness . Designed by SaiTeja</div>
+</body>
+</html>

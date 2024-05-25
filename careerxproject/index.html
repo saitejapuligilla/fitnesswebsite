@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fierce Fitness-Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b2a8fe8dc1.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-dumbbell"></i>
+            <h1>Fierce Fitness</h1>
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="fitness.html">Fitness</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Location</a></li>
+                <li><a href="">Store</a></li>
+                <li><a href="" >contact Us</a></li>
+                <li><a href="#" onclick="openlogin()"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="bmi-calculator">
+        <h1>BMI calculator</h1>
+        <span>BMI is a measurement of the relationship between two prominent body metrics: your weight and height</span>
+        <div class="bmi-c-inside">
+            <div class="bmi-base">
+                
+                    <a href="#bmi" class="closebmi" onclick="closebmi()"><i class="fa-solid fa-xmark"></i></a>
+                
+            </div>
+            <div class="bmi-base">
+                <div class="bmi-block">
+                
+                <i id="person" class="fa-solid fa-person"></i>
+            </div>
+            <div class="bmi-block">
+                <div class="bmi-box">
+                    <h3>Normal</h3>
+                    <p>Normal BMI means that your weight is in the healthy range as per your height.</p>
+                </div>
+                
+                    <div class="bmi-box">
+                        <h3>Ideal Range</h3>
+                        <p>18.5 - 24.9</p>
+                    </div>
+                    <div class="bmi-box">
+                        <h3>Your BMI</h3>
+                        <h1 id="result"></h1>
+                    </div>
+                    <div class="bmi-box">
+                        <h3>Lose weight with Us</h3>
+                        <button>BOOK A FREE TRAIL NOW</button>
+                    </div>
+                </div>
+            <div class="bmi-block">
+                <div class="bmi-box"><h2>Calculate your BMI</h2></div>
+                <label>
+                    <div class="bmi-box">
+                        <h3>height</h3>
+                        <input type="text" placeholder="in cms" id="height">
+                    </div>
+                    <div class="bmi-box">
+                        <h3>weight</h3>
+                        <input type="text" placeholder="in kgs" id="weight">
+    
+                    </div>
+                    <div class="bmi-box">
+                        <button id="btn" >
+                            CALCULATE</button>
+                    </div>
+                </label>
+            </div>
+            </div>
+            
+        </div>
+        
+
+    </section>
+    <script>
+        window.onload = () => {
+        let button = document.querySelector("#btn");
+    
+        // Function for calculating BMI
+        button.addEventListener("click", calculateBMI);
+        };
+        
+        
+        function calculateBMI(){
+            let height = parseInt(document.querySelector("#height").value);
+            let weight = parseInt(document.querySelector("#weight").value);
+            let result = document.querySelector("#result");
+            let bmi = (weight / ((height * height) 
+                            / 10000)).toFixed(2);
+ 
+        // Dividing as per the bmi conditions
+        if (bmi < 18.6) result.innerHTML =
+            `<span>Under Weight : ${bmi}</span>`;
+ 
+        else if (bmi >= 18.6 && bmi < 24.9) 
+            result.innerHTML = 
+                `<span>Normal : ${bmi}</span>`;
+ 
+        else result.innerHTML =
+            `<span>Over Weight : ${bmi}</span>`;
+        }
+    </script>
+    <section id="login">
+        <div class="login-inside">
+            <a href="#" onclick="closelogin()" class="logo-close">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+            <div class="logo">
+                <i class="fa-solid fa-dumbbell"></i>
+                <h1>Fierce Fitness</h1>
+            </div>
+            <div class="form">
+                <input type="tel" name="phonenumber" placeholder="Enter Your Phone Number">
+                <button id="contine" type="submit" onclick="">continue</button>
+            </div>
+            <div class="login-usingapps">
+                <span>or connect with us</span>
+                <div class="login-logo">
+                    <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AaSxoQzlQPX7i9ATws17l3fVnaZw5EJN_5cLVAhaFuUnHfBZcWmFRW13IKYBObaqhqaRLKE6DCzHAg&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S789054080%3A1715268262860174&theme=mn&ddm=0" target="_blank"><i class="fa-brands fa-google"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=151&ct=1715268312&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fcobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26nlp%3d1%26RpsCsrfState%3d590a73e7-31d3-59b1-fc62-a3b5bd9004eb&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div>
+                <p>* By Continuing you agree to the Terms of Services and Privacy policy.</p>
+            </div>
+        </div>
+    </section>
+    <section id="Home">
+        <div class="home-matter">
+            <h2>Best Gym In Hyderabad</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium est, suscipit enim quam fugiat explicabo officia mollitia libero doloribus! Doloremque minus, accusamus rerum enim maiores nemo debitis omnis assumenda neque!</p>
+        </div>
+        <div class="btn">
+            <a class="blue" href="#">Learn More</a>
+            <a class="yellow" href="#">Our Courses</a>
+        </div>
+    </section>
+    <section id="courses">
+        <h1>Our Courses</h1>
+        <p>One membership for all your fitness needs</p>
+        <div class="courses-base">
+            <a href="" class="courses-box">
+
+                <span>Cult Pass</span>
+                <h2>ELITE</h2>
+                <p>Unlimited access to group classes, all gyms and at-home workouts></p>
+            </a>
+            <a href="" class="courses-box">
+                <span>Cult Pass</span>
+                <h2>PRO</h2>    
+                <p>Unlimited access to all PRO gyms and at-home workouts></p>
+            </a>
+            <a href="" class="courses-box">
+                <span>Cult Pass</span>
+                <h2>SELECT</h2>
+                <p>Unlimited access to single center and at-home workouts></p>
+            </a>           
+        </div>
+    </section>
+    <section  id="bmi">
+        
+        <h1>Body Mass Index Calculator</h1>
+        <a href="https://en.wikipedia.org/wiki/Body_mass_index" id="bmi-lm" target="_blank">Learn more</a>
+        <a href="#bmi" onclick="openbmi()" class="bmi-inside">
+        <div class="bmi-matter">
+            <span>BODY MASS INDEX</span>
+            <p>BMI is a measurement of the relationship between two prominent body metrics: your weight and height<p>
+        </div>
+        <div class="bmi-pic">
+        </div>
+        </a>
+    </section>
+    <section id="cultpass">
+        <div class="head">
+            <h1>CULT PASS</h1>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="cultpass-passes-base">
+            <div class="cultpass-passes-box">
+                    <a href="" class="cultpass-passes-box-box">
+                       <img src="photos/cult-elite.jpeg" alt="cult-elite">
+                        <span>cultpass</span>
+                        <h3>ELITE</h3> 
+                    </a>
+                    
+                    
+                    <h4>Unlimited access to</h4>
+                    <ul>
+                        <li>At-center group classes</li>
+                        <li>All ELITE & PRO gyms</li>
+                        <li>At-home live workouts</li>
+                    </ul>
+                    <div class="btn">
+                        <a href="" class="blue">TRY FOR FREE</a>
+                        <a href="" class="yellow">LEARN MORE</a>
+                    </div>
+            </div>
+            <div class="cultpass-passes-box">
+                <a href="" class="cultpass-passes-box-box">
+                    <img src="photos/cult-pro.jpeg" alt="">
+                    <span>cultpass</span>
+                    <h3>PRO</h3>                   
+                </a>
+                <h4>Unlimited access to</h4>
+                <ul>
+                    <li>All PRO gyms</li>
+                    <li>2 Sessions/month at ELITE gyms & group classes</li>
+                    <li>At-home live workouts</li>
+                </ul>
+                <div class="btn">
+                    <a href="" class="blue">TRY FOR FREE</a>
+                    <a href="" class="yellow">LEARN MORE</a>
+                </div>
+        </div>
+        <div class="cultpass-passes-box">
+            <a href="" class="cultpass-passes-box-box">
+                <img src="photos/cult-play.jpeg" alt="">
+                <span>cultpass</span>
+                <h3>PLAY</h3>
+            </a>
+                
+            <h4>Unlimited access to</h4>
+            <ul>
+                <li>Badminton, swimming & other sports</li>
+                <li>Guaranteed playing partner</li>
+                <li>Guided sessions with experts</li>
+            </ul>
+            <div class="btn">
+                <a href="" class="blue">TRY FOR FREE</a>
+                <a href="" class="yellow">LEARN MORE</a>
+            </div>
+    </div>
+    <div class="cultpass-passes-box">
+        <a class="cultpass-passes-box-box" href="" >
+            <img src="photos/cult-select.jpeg" alt="">
+            <span>cultpass</span>
+            <h3>SELECT</h3>
+        </a>      
+        <h4>Unlimited access to</h4>
+        <ul>
+            <li>One center that you choose</li>
+            <li>Limited sessions* in other centers & gyms in your city</li>
+            <li>At-home live workouts</li>
+        </ul>
+        <div class="btn">
+            <a href="" class="blue">TRY FOR FREE</a>
+            <a href="" class="yellow">LEARN MORE</a>
+        </div>
+</div>
+            
+                </div>
+    </section>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-logo">
+                <i class="fa-solid fa-dumbbell"></i>
+                <h1>Fierce Fitness</h1>
+            </div>
+        </div>
+        <div class="footer-main">
+            <p class="links"> for business</p>
+            <p class="links"> franchise</p>
+            <p class="links">corporate partnerships</p>
+            <p class="links">pass network</p>
+            <a href="https://static.cult.fit/tnc_business.html" target="_blank" class="links">t&c for business</a>
+        </div>
+        <div class="footer-main">
+            <p class="links">partner.fit</p>
+            <p class="links">blogs</p>
+            <p class="links">security</p>
+            <p class="links">careers</p>
+           
+        </div>
+        <div class="footer-main">
+            <a href="#" class="links">contact us</a>
+            <a href="https://static.cult.fit/privacy__cult.html" target="_blank" class="links">privacy policy</a>
+            <a class="links" href="#bmi">cult bmi calculator</a>
+            <a href="https://static.cult.fit/terms__cult.html" target="_blank" class="links">terms & conditions</a>
+        </div>
+        
+        <div class="footer-main">
+                <div class="footer-google">
+                    <a href="https://play.google.com/store/apps/details?id=fit.cure.android"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="140" height="auto" /></a>
+                    <a href="https://apps.apple.com/us/app/cult-fit-health-fitness-gyms/id1217794588" ><img class="bn46" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"alt="bn45"/></a>
+                </div>
+                <h3 style="color: white;">FOLLOW US ON</h3>
+                <div class="footer-insta">
+                    <a href="https://www.instagram.com/cultfitOfficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCSE72IaHOL-1Tv-m3JHE4Cg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/cultfitofficial" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=https://twitter.com/cultfitOfficial"" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/cult.fit/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <div class="footer-foot">CopyRight <i class="fa-solid fa-copyright"></i>2020 Fierce Fitness . Designed by SaiTeja</div>
+    
+</body>
+<script>
+    function closelogin(){
+        document.getElementById("login").style.display="none";
+    }
+    function openlogin(){
+        document.getElementById("login").style.display="flex";
+    }
+    function closebmi(){
+        document.getElementById("bmi-calculator").style.display="none";
+    }
+    function openbmi(){
+        document.getElementById("bmi-calculator").style.display="flex";
+    }
+</script>
+</html>
